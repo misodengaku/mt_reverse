@@ -34,10 +34,12 @@ namespace mt_reverse
 		const uint UPPER_MASK = 0x80000000; /* most significant w-r bits */
 		static readonly uint[] mag01 = { 0x0, MATRIX_A };
 
-		public uint[] mt = new uint[N]; /* the array for the state vector  */
 
 		short mti;
 		#endregion
+
+		// 外部から状態を変更できるように改変
+		public uint[] mt = new uint[N]; /* the array for the state vector  */
 
 		/* initializing the array with a NONZERO seed */
 
